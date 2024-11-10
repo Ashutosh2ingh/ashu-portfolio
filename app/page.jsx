@@ -8,6 +8,7 @@ import {FiDownload } from "react-icons/fi"
 const Home = () => {
 
   const handleDownloadCV = () => {
+    // Pdf Changed
     const pdfURL = '/assets/resume/cv.pdf';
     window.open(pdfURL, '_blank');
   };
