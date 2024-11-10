@@ -16,7 +16,7 @@ const projects = [
         title: "Gym Website",
         description: "I have created the complete frontend for a gym website which contain various pages.",
         stack:[
-            { name: "NEXT.JS" }, { name: "Framer-Motion" }, { name: "Javascript" }, { name: "Bootstrap" }, { name: "SCSS"}
+            { name: "NEXT.JS" }, { name: "framer-motion" }, { name: "Javascript" }, { name: "SCSS"}
         ],
         image: '/assets/work/gym.png',
         live: "",
@@ -28,7 +28,7 @@ const projects = [
         title: "Gym Website",
         description: "I have created the backend of the gym website using django, Django Rest Framework (DRF).",
         stack:[
-            { name: "Django" }, { name: "Django Rest Framework (DRF)" }, { name: "Javascript" }
+            { name: "Django" }, { name: "DRF" }, { name: "Javascript" }
         ],
         image: '/assets/work/gym.png',
         live: "",
