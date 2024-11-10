@@ -14,16 +14,28 @@ const projects = [
         num: '01',
         category: 'frontend',
         title: "Gym Website",
-        description: "I have created the complete frontend for a gym website which contain various pages for user panel and a admin panel.",
+        description: "I have created the complete frontend for a gym website which contain various pages.",
         stack:[
-            { name: "HTML 5" }, { name: "CSS 3" }, { name: "Javascript" }, { name: "Bootstrap" }
+            { name: "NEXT.JS" }, { name: "Framer-Motion" }, { name: "Javascript" }, { name: "Bootstrap" }, { name: "SCSS"}
         ],
         image: '/assets/work/gym.png',
         live: "",
-        github: "https://github.com/Ashutosh2ingh/GymTech"
+        github: "https://github.com/Ashutosh2ingh/fitphysique"
     },
     {
         num: '02',
+        category: 'backend',
+        title: "Gym Website",
+        description: "I have created the backend of the gym website using django, Django Rest Framework (DRF).",
+        stack:[
+            { name: "Django" }, { name: "Django Rest Framework (DRF)" }, { name: "Javascript" }
+        ],
+        image: '/assets/work/gym.png',
+        live: "",
+        github: "https://github.com/Ashutosh2ingh/fitphysique-backend"
+    },
+    {
+        num: '03',
         category: 'frontend',
         title: "Weather App",
         description: "In this project I have designed a frontend for weather and also integrated operweathermap api.",
@@ -35,7 +47,7 @@ const projects = [
         github: "https://github.com/Ashutosh2ingh/Weather-app"
     },
     {
-        num: '03',
+        num: '04',
         category: 'full stack',
         title: "Contact Management",
         description: "In this project I have design a frontend for contact managment and also created json-server and integrated.",
@@ -47,19 +59,31 @@ const projects = [
         github: "https://github.com/Ashutosh2ingh/contact-manager"
     },
     {
-        num: '04',
+        num: '05',
+        category: 'frontend',
+        title: "Ecommerce Website",
+        description: "In this project I have developed the complete frontend for this project using Next.js, Framer-motion, bootstrap and css.",
+        stack:[
+            { name: "NEXT.JS" }, { name: "Framer-motion" }, { name: "SCSS" }, { name: 'css' }
+        ],
+        image: '/assets/work/thumb1.png',
+        live: "",
+        github: "https://github.com/Ashutosh2ingh/ecommerce"
+    },
+    {
+        num: '06',
         category: 'backend',
         title: "Ecommerce Website",
         description: "In this project I have created the complete backend for this and provided the api to frontend team and also integrated razorpay in it.",
         stack:[
-            { name: "ReactJS" }, { name: "Django" }, { name: "Bootstrap" }, { name: 'DRF' }
+            { name: "NEXT.JS" }, { name: "Django" }, { name: "Bootstrap" }, { name: 'DRF' }
         ],
         image: '/assets/work/thumb1.png',
         live: "",
-        github: "https://github.com/Ashutosh2ingh/Ecommerce-Backend"
+        github: "https://github.com/Ashutosh2ingh/ecom-backend"
     },
     {
-        num: '05',
+        num: '07',
         category: 'backend',
         title: "PMT",
         description: "In this project I have created the complete backend for this and also integrated in the backend into it and also add validation through backend.",
