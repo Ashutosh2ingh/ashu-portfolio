@@ -12,30 +12,18 @@ import WorkSliderBtns from "@/components/WorkSliderBtns";
 const projects = [
     {
         num: '01',
-        category: 'frontend',
+        category: 'full stack',
         title: "Gym Website",
-        description: "I have created the complete frontend for a gym website which contain various pages.",
+        description: "Developed a responsive Gym Management Website using Next.js, SCSS, Flask, and Framer Motion, featuring Razorpay integration and role-based Employee/Admin panels for efficient operations.",
         stack:[
-            { name: "NEXT.JS" }, { name: "framer-motion" }, { name: "Javascript" }, { name: "SCSS"}
+            { name: "NEXT.JS" }, { name: "framer-motion" }, { name: "SCSS"}, { name: "Django"}, { name: "DRF"}
         ],
         image: '/assets/work/gym.png',
-        live: "",
+        live: "https://fitphysique-omega.vercel.app/",
         github: "https://github.com/Ashutosh2ingh/fitphysique"
     },
     {
         num: '02',
-        category: 'backend',
-        title: "Gym Website",
-        description: "I have created the backend of the gym website using django, Django Rest Framework (DRF).",
-        stack:[
-            { name: "Django" }, { name: "DRF" }, { name: "Javascript" }
-        ],
-        image: '/assets/work/gym.png',
-        live: "",
-        github: "https://github.com/Ashutosh2ingh/fitphysique-backend"
-    },
-    {
-        num: '03',
         category: 'frontend',
         title: "Weather App",
         description: "In this project I have designed a frontend for weather and also integrated operweathermap api.",
@@ -43,56 +31,68 @@ const projects = [
             { name: "ReactJs" }, { name: "CSS 3" }, { name: "Bootstrap" }, {name: 'openweathermapapi'}
         ],
         image: '/assets/work/weatherapp.png',
-        live: "",
+        live: "https://weather-app-pi-nine-52.vercel.app/",
         github: "https://github.com/Ashutosh2ingh/Weather-app"
+    },
+    {
+        num: '03',
+        category: 'frontend',
+        title: "MissLaundry App",
+        description: "Developed a React Native MissLaundry app with a clean UI, smooth navigation, image slider, and optimized components for seamless cross-device performance.",
+        stack:[
+            { name: "React Native" }, { name: "Bootstrap" }
+        ],
+        image: '/assets/work/Laundry.png',
+        live: "",
+        github: "https://github.com/Ashutosh2ingh/misslaundry-App"
     },
     {
         num: '04',
         category: 'full stack',
-        title: "Contact Management",
-        description: "In this project I have design a frontend for contact managment and also created json-server and integrated.",
+        title: "Vantage Report",
+        description: "Developed at Tata Technologies, this MES report web app for Tata Motors uses React, Express.js, and MS SQL with dynamic visualizations, role-based access, secure APIs, and responsive UI for streamlined data insights.",
         stack:[
-            { name: "ReactJS" }, { name: "CSS 3" }, { name: "Bootstrap" }, { name: "JSON Server" }, 
+            { name: "React.js" }, { name: "Framer-motion" }, { name: "Bootstrap" }, { name: 'Express.js' }, { name: 'MSSQL' }
         ],
-        image: '/assets/work/contact.png',
+        image: '/assets/work/vantage.jpeg',
         live: "",
-        github: "https://github.com/Ashutosh2ingh/contact-manager"
+        github: ""
     },
     {
         num: '05',
-        category: 'frontend',
-        title: "Ecommerce Website",
-        description: "In this project I have developed the complete frontend for this project using Next.js, Framer-motion, bootstrap and css.",
+        category: 'full stack',
+        title: "MES Dashboard",
+        description: "Developed a React.js real-time production monitoring dashboard sourcing PLC data via Campware APIs, featuring live status indicators, voice alerts, and proactive event tracking for efficient shop-floor management and rapid issue resolution.",
         stack:[
-            { name: "NEXT.JS" }, { name: "Framer-motion" }, { name: "SCSS" }, { name: 'css' }
+            { name: "React.js" }, { name: "Framer-motion" }, { name: "Bootstrap" }, { name: 'Express.js' }, { name: 'MSSQL' }
         ],
-        image: '/assets/work/thumb1.png',
+        image: '/assets/work/dashboard.jpeg',
         live: "",
-        github: "https://github.com/Ashutosh2ingh/ecommerce"
+        github: ""
     },
     {
         num: '06',
-        category: 'backend',
-        title: "Ecommerce Website",
-        description: "In this project I have created the complete backend for this and provided the api to frontend team and also integrated razorpay in it.",
+        category: 'full stack',
+        title: "AshMart",
+        description: "Developed a React Native e-commerce app with Django REST backend, featuring OTP verification, Razorpay payments, product variations, order tracking, and a secure, user-friendly shopping experience with robust API integration.",
         stack:[
-            { name: "NEXT.JS" }, { name: "Django" }, { name: "Bootstrap" }, { name: 'DRF' }
+            { name: "React Native" }, { name: "Django" }, { name: "Bootstrap" }, { name: "Twillio" }
         ],
-        image: '/assets/work/thumb1.png',
+        image: '/assets/work/ashmart.jpeg',
         live: "",
-        github: "https://github.com/Ashutosh2ingh/ecom-backend"
+        github: "https://github.com/Ashutosh2ingh/AshMart"
     },
     {
         num: '07',
-        category: 'backend',
-        title: "PMT",
-        description: "In this project I have created the complete backend for this and also integrated in the backend into it and also add validation through backend.",
+        category: 'full stack',
+        title: "RUBeats",
+        description: "Developed a React Native music app with a user-friendly interface, smooth navigation, and optimized performance for seamless audio streaming and playback.",
         stack:[
-            { name: "HTML 5" }, { name: 'CSS 3' }, { name: "Django" }, { name: "Bootstrap" }
+            { name: "React Native" }, { name: "Bootstrap" }
         ],
-        image: '/assets/work/pmt.png',
+        image: '/assets/work/RuBeats.jpeg',
         live: "",
-        github: "https://github.com/Ashutosh2ingh/pmt"
+        github: "https://github.com/Ashutosh2ingh/RUBeats"
     },
 ]
 

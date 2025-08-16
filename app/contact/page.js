@@ -7,6 +7,8 @@ import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrig
 import { FaPhoneAlt, FaEnvelope, FaMapMarkedAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
 import emailjs from '@emailjs/browser';
+import toast from "react-hot-toast";
+import { Loader2 } from "lucide-react";
 
 const info = [
     {
@@ -31,24 +33,59 @@ const Contact = () => {
     const ref = useRef();
     const formref = useRef();
     const [selectedService, setSelectedService] = useState("");
+    const [loading, setLoading] = useState(false);
+    const [formValues, setFormValues] = useState({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        message: "",
+    });
 
     const sendEmail = (e) => {
         e.preventDefault();
+
+        if (!validateForm()) return;
+
+        setLoading(true);
     
-        emailjs.sendForm('service_mhny8xc', 'template_uck9w4e', formref.current, {
+        emailjs.sendForm('service_mhny8xc', 'template_c7dexuf', formref.current, {
             publicKey: 'y4b5wX7grM5IEeGm6',
         })
         .then((result) => {
-                window.location.reload();
+                toast.success("Message sent successfully 🎉");
+                setLoading(false);
+                setFormValues({ firstName: "", lastName: "", email: "", phone: "", message: "" });
+                setSelectedService("");
             },
             (error) => {
-                alert("Something went wrong. Please try again.");
+                toast.error("Something went wrong. Please try again.");
+                setLoading(false);
             },
         );
     };
 
     const handleServiceChange = (value) => {
         setSelectedService(value);
+    };
+
+    const handleChange = (e) => {
+        setFormValues({ ...formValues, [e.target.name]: e.target.value });
+    };
+
+    const validateForm = () => {
+        const { firstName, lastName, email, phone, message } = formValues;
+        if (!firstName || !lastName || !email || !phone || !message || !selectedService) {
+            toast.error("Please fill out the entire form");
+            return false;
+        }
+        // Email validation regex
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            toast.error("Please enter a valid email address");
+            return false;
+        }
+        return true;
     };
 
     return (
@@ -76,10 +113,10 @@ const Contact = () => {
 
                             {/* input */}
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <Input type="firstname" placeholder="First Name" name="firstName" />
-                                <Input type="lastname" placeholder="Last Name" name="lastName" />
-                                <Input type="email" placeholder="Email Address" name="email" />
-                                <Input type="phone" placeholder="Phone Number" name="phone" />
+                                <Input type="firstname" placeholder="First Name" name="firstName" value={formValues.firstName} onChange={handleChange} />
+                                <Input type="lastname" placeholder="Last Name" name="lastName" value={formValues.lastName} onChange={handleChange} />
+                                <Input type="email" placeholder="Email Address" name="email" value={formValues.email} onChange={handleChange} />
+                                <Input type="phone" placeholder="Phone Number" name="phone" value={formValues.phone} onChange={handleChange} />
                             </div>
 
                             {/* select */}
@@ -104,12 +141,34 @@ const Contact = () => {
                                 className="h-[200px]"
                                 placeholder="Type your message here"
                                 name="message"
+                                value={formValues.message}
+                                onChange={handleChange}
                             />
 
                             {/* button */}
-                            <Button size="md" className="max-w-40">
-                                Send Message
-                            </Button>
+                            <div>
+                                {loading ? (
+                                    <Button disabled className="max-w-40 flex items-center gap-2">
+                                        <Loader2 className="h-5 w-5 animate-spin" /> Sending...
+                                    </Button>
+                                    ) : (
+                                    <Button
+                                        size="md"
+                                        className="max-w-40"
+                                        type="submit"
+                                        disabled={
+                                            !formValues.firstName ||
+                                            !formValues.lastName ||
+                                            !formValues.email ||
+                                            !formValues.phone ||
+                                            !formValues.message ||
+                                            !selectedService
+                                        }
+                                    >
+                                        Send Message
+                                    </Button>
+                                )}
+                            </div>
                         </motion.form>
                     </div>
 
