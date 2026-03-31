@@ -1,6 +1,6 @@
 "use client";
 import { FaHtml5, FaCss3, FaJs, FaReact, FaPython, FaBootstrap } from "react-icons/fa";
-import { SiTailwindcss, SiNextdotjs, SiDjango, SiGit, SiFlask } from "react-icons/si";
+import { SiTailwindcss, SiNextdotjs, SiDjango, SiGit, SiFlask, SiMicrosoftsqlserver, SiAngular, SiOpenjdk } from "react-icons/si";
 import { TbBrandReactNative } from "react-icons/tb";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
@@ -10,7 +10,7 @@ import { motion } from "framer-motion";
 // About Data
 const about = {
   title: "About me",
-  description: "I am a Full stack developer skilled in Python, Django, React, framer-motion, and SQL databases.",
+  description: "I am a Full stack developer skilled in Python, Django, React, framer-motion, Apriso, FTPC and SQL databases.",
   info: [
     {
       fieldName: "Name",
@@ -22,7 +22,7 @@ const about = {
     },
     {
       fieldName: "Experience",
-      fieldValue: "2+ Years",
+      fieldValue: "3+ Years",
     },
     {
       fieldName: "LinkedIn",
@@ -51,12 +51,17 @@ const about = {
 const experience = {
   icon: '/assets/resume/badge.svg',
   title: 'My Experience',
-  description: 'I have designed various websites and apps like ecommerce, Misslaundry, PMT, GYM, Contact Management.',
+  description: 'Full Stack Developer with 3+ years of experience delivering scalable web and enterprise solutions.Currently working at Tata Technologies in Apriso (MES), contributing to both application development and production support. Experienced in React, Next.js, Django, Flask, MSSQL, and REST APIs. Strong expertise in performance optimization, manufacturing systems, and building business-driven applications.',
   items:[
     {
       company: "Tata Technologies Limited",
-      position: "MES FTPC Support",
-      duration: "Apr 2024 - Present",
+      position: "Solution Developer",
+      duration: "Mar 2026 - Present",
+    },
+    {
+      company: "Tata Technologies Limited",
+      position: "MES Developer & Support",
+      duration: "Apr 2024 - Feb 2026",
     },
     {
       company: "Techpath",
@@ -64,14 +69,9 @@ const experience = {
       duration: "Jul 2023 - Feb 2024",
     },
     {
-      company: "LearQoch",
-      position: "Full Stack Developer Intern",
-      duration: "Mar 2023 - Jun 2023",
-    },
-    {
       company: "Techpath",
-      position: "Full Stack Developer Intern",
-      duration: "Dec 2022 - Feb 2023",
+      position: "Python Intern",
+      duration: "Dec 2022 - Jun 2023",
     },
   ]
 };
@@ -80,12 +80,12 @@ const experience = {
 const education = {
   icon: '/assets/resume/cap.svg',
   title: 'My education',
-  description: 'I have completed my graduation in BCA in 2023 and now I am pursuing my post-graduation in MCA from 2023 onwards.',
+  description: 'I successfully completed my Bachelor of Computer Applications (BCA) in 2023, followed by my Master of Computer Applications (MCA) in 2025.',
   items:[
     {
       institution: "Manipal University",
       degree: "Master in Computer Applicaiton",
-      duration: "Sep 2023 - Present",
+      duration: "Sep 2023 - Nov 2025",
     },
     {
       institution: "HCPG",
@@ -163,6 +163,22 @@ const skills = {
       icon: <SiFlask/>,
       name: "Flask",
     },
+    {
+      icon: (<img src="/assets/skills/apriso.png" alt="Apriso" className="w-25 h-20 object-contain" />),
+      name: "Apriso",
+    },
+    {
+      icon: <SiMicrosoftsqlserver />,
+      name: "MSSQL",
+    },
+    {
+      icon: <SiAngular />,
+      name: "Angular",
+    },
+    {
+      icon: <SiOpenjdk />,
+      name: "Java",
+    },
   ]
 };
 
@@ -195,7 +211,7 @@ const Resume = () => {
           </TabsList>
 
           {/* Content */}
-          <div classname="min-h-[70vh] w-full">
+          <div className="min-h-[70vh] w-full">
 
             {/* Experience */}
             <TabsContent value="experience" className="w-full">
@@ -234,7 +250,7 @@ const Resume = () => {
             </TabsContent>
 
             {/* Education */}
-            <TabsContent value="education" classname="w-full">
+            <TabsContent value="education" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{education.title}</h3>
                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{education.description}</p>
@@ -270,7 +286,7 @@ const Resume = () => {
             </TabsContent>
             
             {/* Skills */}
-            <TabsContent value="skills" classname="w-full h-full">
+            <TabsContent value="skills" className="w-full h-full">
               <div className="flex flex-col gap-[30px]">
                 <div className="flex flex-col gap-[30px] text-center xl:text-left">
                   <h3 className="text-4xl font-bold">{skills.title}</h3>
@@ -302,7 +318,7 @@ const Resume = () => {
             </TabsContent>
             
             {/* About */}
-            <TabsContent value="about" classname="w-full text-center xl:text-left">
+            <TabsContent value="about" className="w-full text-center xl:text-left">
               <div className="flex flex-col gap-[30px]">
                 <h3 className="text-4xl font-bold">{about.title}</h3>
                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">

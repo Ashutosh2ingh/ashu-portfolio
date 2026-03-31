@@ -24,7 +24,7 @@ const info = [
     {
         icon: <FaMapMarkedAlt/>,
         title: "Address",
-        description: "B-2/9 21, Metropolis City, Rudrapur",
+        description: "Aashirvad Apartment, Thaltej, Ahmedabad",
     },
 ]
 
@@ -60,6 +60,7 @@ const Contact = () => {
             },
             (error) => {
                 toast.error("Something went wrong. Please try again.");
+                console.log(error);
                 setLoading(false);
             },
         );
@@ -131,6 +132,7 @@ const Contact = () => {
                                         <SelectItem value="App-Development">App Development</SelectItem>
                                         <SelectItem value="UI/UX">UI/UX Design</SelectItem>
                                         <SelectItem value="MES">MES</SelectItem>
+                                        <SelectItem value="Apriso-Development">Apriso Development</SelectItem>
                                     </SelectGroup>
                                 </SelectContent>
                             </Select>
