@@ -137,6 +137,7 @@ const Contact = () => {
                                 </SelectContent>
                             </Select>
                             <input type="hidden" name="service" value={selectedService} />
+                            <input type="hidden" name="signature" value="Portfolio 🚀" />
 
                             {/* textarea */}
                             <Textarea
